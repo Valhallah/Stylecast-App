@@ -179,8 +179,10 @@ $(document).ready(function() {
 
    $("#index-card").hide();
    $("#index-card").show(1000);
+   $('#progressBar').hide()
 
    $(document).on('click', '#answer3', function() {
+
 
        $(".chooseHair").html("What is your hair type?");
 
@@ -211,15 +213,17 @@ $(document).ready(function() {
 
    $(document).on('click', '.curlyButton', function() {
        getWeather(35);
+       $('#progressBar').show()
    });
 
    $(document).on('click', '.wavyButton', function() {
        getWeather(50);
+       $('#progressBar').show()
    });
 
    $(document).on('click', '.straightButton', function() {
        getWeather(40);
-
+       $('#progressBar').show()
    });
 
    var images = ["assets/images/sunny1.png", "assets/images/rainy1.png", "assets/images/windy1.png", "assets/images/snowy1.png"];
