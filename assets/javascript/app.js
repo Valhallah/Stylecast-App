@@ -10,9 +10,9 @@ var minTemperature = 285.95;
 var maxTemperature = 297.59;
 var hairQuestion = ["Naturally Curly", "Wavy", "Straight"];
 var img_url = ["assets/images/curly1.png", "assets/images/wavy1.png", "assets/images/straight1.png"];
-var imgClass = ["CurlyButton", "wavyButton", "StraightButton"];
+var imgClass = ["curlyButton", "wavyButton", "straightButton"];
 var config = {
-    apiKey: "AIzaSyC6o7t2PclsAkkXhFu4AklfNy1DqacBrT0",
+    apiKey: "6735d19ef22249dcb08174524171506",
     authDomain: "firstproject-7e549.firebaseapp.com",
     databaseURL: "https://firstproject-7e549.firebaseio.com",
     storageBucket: "firstproject-7e549.appspot.com",
@@ -66,9 +66,9 @@ function generateResult() {
 
       if (dataList.hairType == 50) {
           if (dataList.humidity < 0.5) {
-              humidityDesc = "The humidity today is just right to keep any style your heart desires.";
+              humidityDesc = "The humidity is just right to keep any style your heart desires.";
           } else {
-              humidityDesc = "The humidity is a little high today. If your hair frizzes easily you might want to try an anti humectant.";
+              humidityDesc = "The humidity is a little high. If your hair frizzes easily you might want to try an anti humectant.";
           }
       }
 
@@ -81,17 +81,17 @@ function generateResult() {
       }
 
       if (dataList.wind < 10) {
-          windDesc = "The wind today seems just right.";
+          windDesc = "The wind seems just right.";
       } else {
-          windDesc = "The wind will try your patience today. Don't forget a hair tie.";
+          windDesc = "The wind will try your patience. Don't forget a hair tie.";
       }
 
       if (dataList.temperature < 55) {
-          tempDesc = "The temperature is cold today but it shouldn't be a problem for your style, unless we have a beanie situation. Just try not to keep it on too long. ";
+          tempDesc = "The temperature is cold  but it shouldn't be a problem for your style, unless we have a beanie situation. Just try not to keep it on too long. ";
       } else if (dataList.temperature < 76) {
-          tempDesc = "The temperature is very nice today.";
+          tempDesc = "The temperature is very nice.";
       } else {
-          tempDesc = "The temperature will be pretty warm today. Sweat might mess with your style. Try and stay cool or maybe try a cute updo!";
+          tempDesc = "The temperature will be pretty warm. Sweat might mess with your style. Try and stay cool or maybe try a cute updo!";
       }
 
       var videoLink = "";
@@ -210,7 +210,7 @@ $(document).ready(function() {
        $(".chooseHair").html("Try a hat.");
    });
 
-   $(document).on('click', '.CurlyButton', function() {
+   $(document).on('click', '.curlyButton', function() {
        getWeather(35);
    });
 
@@ -218,7 +218,7 @@ $(document).ready(function() {
        getWeather(50);
    });
 
-   $(document).on('click', '.StraightButton', function() {
+   $(document).on('click', '.straightButton', function() {
        getWeather(40);
 
    });
@@ -293,7 +293,7 @@ $(document).ready(function() {
           $("#modal2").modal();
       });
 
-      function checkingMan(email, password) {
+      function validateUser(email, password) {
           var checkingCondition = 0;
 
           if (email == "") checkingCondition = 1;
@@ -304,7 +304,7 @@ $(document).ready(function() {
       }
 
 
-      $(document).on('click', '#registerMan', function() {
+      $(document).on('click', '#registerUser', function() {
           //TrainNamen = $("#Train-Name").val().trim();
           //console.log("hi");
           console.log(idpasswordS);
@@ -318,7 +318,7 @@ $(document).ready(function() {
           var passewordCon = $("#passwordR").val().trim();
           console.log(passewordCon);
 
-          var conditionCheking = checkingMan(emailCheck, passewordCon);
+          var conditionCheking = validateUser(emailCheck, passewordCon);
           console.log(conditionCheking);
 
 
@@ -375,7 +375,7 @@ $(document).ready(function() {
             var passewordCon = $("#passwordL").val().trim();
 
 
-            var conditionCheking = checkingMan(emailCheck, passewordCon);
+            var conditionCheking = validateUser(emailCheck, passewordCon);
 
 
 
@@ -394,7 +394,7 @@ $(document).ready(function() {
                             checkingI = true;
                         if (passewordCon == idpasswordS[i].pass)
                             chekcingP = true;
-                        
+
                     }
                 }
             }
