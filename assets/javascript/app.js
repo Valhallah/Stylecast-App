@@ -3,7 +3,6 @@ var fStandard = 273.15;
 var windPower = 0;
 var code = "";
 var WindStandard = 10.8;
-var waryhumidity = 50;
 var normalhumidity = 40;
 var baldTest = false;
 var minTemperature = 285.95;
