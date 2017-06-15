@@ -11,7 +11,7 @@ var hairQuestion = ["Naturally Curly", "Wavy", "Straight"];
 var img_url = ["assets/images/curly1.png", "assets/images/wavy1.png", "assets/images/straight1.png"];
 var imgClass = ["curlyButton", "wavyButton", "straightButton"];
 var config = {
-    apiKey: "6735d19ef22249dcb08174524171506",
+    apiKey: "AIzaSyC6o7t2PclsAkkXhFu4AklfNy1DqacBrT0",
     authDomain: "firstproject-7e549.firebaseapp.com",
     databaseURL: "https://firstproject-7e549.firebaseio.com",
     storageBucket: "firstproject-7e549.appspot.com",
